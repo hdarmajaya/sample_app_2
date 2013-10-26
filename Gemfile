@@ -1,19 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
-gem 'therubyracer'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
-group :development do
-  gem 'rspec-rails', '2.0.1'
+group :development, :test do
+  gem 'sqlite3', '1.3.5'
+  gem 'rspec-rails', '2.11.0'
 end
 
 group :test do
-  gem 'rspec', '2.0.1'
+  #gem 'rspec', '2.0.1'
   gem 'webrat', '0.7.1'
 end
 
@@ -24,7 +22,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
